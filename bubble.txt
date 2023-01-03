@@ -1,0 +1,19 @@
+package Technical_21_12;
+
+public class Bubble {
+
+	public static void main(String[] args) {
+		String[] namelist= {"sinan","karthik","raj","dumma","kidoo"};
+		for(int i=0;i<namelist.length-1;i++)
+			for(int j=i+1;j<namelist.length;j++)
+				if(namelist[i].compareTo(namelist[j])>0) {
+					String temp=namelist[i];
+					namelist[i]=namelist[j];
+					namelist[j]=temp;
+					
+				}
+		for(int i =0;i<namelist.length;i++)
+			System.out.println(namelist[i].toUpperCase());
+	}
+
+}
