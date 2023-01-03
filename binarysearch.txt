@@ -1,0 +1,28 @@
+package Technical_21_12;
+
+import java.util.Arrays;
+
+public class BinarySearch {
+
+	public static void main(String[] args) {
+		String[] namelist= {"sinan","karthik","raj","dumma","kidoo"};
+		Arrays.sort(namelist);
+		int lb=0, ub=namelist.length-1;
+		String searchName=new java.util.Scanner(System.in).nextLine();
+		while(ub>=lb) {
+			int middle=(lb+ub)/2;
+			if(namelist[middle].equals(searchName)) {
+				System.out.print("fOUND @"+ (middle+1));
+				return;
+				
+			}
+			else if(namelist[middle].compareTo(searchName)>0) 
+				ub=middle-1;
+			  else
+				lb=middle+1;
+				
+			}
+			System.out.println("Not found");
+		}
+		
+	}
