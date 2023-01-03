@@ -1,0 +1,34 @@
+package twoDareay;
+import java.util.Scanner;
+
+public class Tda {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+
+		int size =in.nextInt(); //3
+		String[] names=new String[size];  
+		double[][] marks =new double [size][3];
+		//store marks 
+		//only row dimension 
+		// we can declare as double[][] marks =new double [size][3];
+		for(int index=0;index<size;index++) {
+			System.out.print("Student name:");
+		    names[index]=in.nextLine();
+		    names[index]=in.nextLine();
+		    for(int i=0;i<3;i++) {
+		    	marks[index][i]=in.nextDouble();  //3 subject marks
+		    }
+	   }//print head
+        
+		System.out.println("****************************");
+		System.out.println("Student name     Marks1 Marks2 Marks3 Average");
+		System.out.println("****************************");
+		//print data
+		for(int index=0;index<size;index++) {
+			double avg=(marks[index][0]+marks[index][1]+marks[index][2])/3;
+			System.out.printf("%-15s %5.2f %5.2f %5.2f %5.2f \n", names[index],
+			  marks[index][0],marks[index][1],marks[index][2],avg);
+		}
+    }
+}
